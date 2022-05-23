@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import MultiStep from './index'
-import StepOne from './stepOne'
-import StepTwo from './stepTwo'
-import StepThree from './stepThree'
-import StepFour from './stepFour'
+import StepOne from './components/Steps/stepOne'
+import StepTwo from './components/Steps/stepTwo'
+import StepThree from './components/Steps/stepThree'
+import StepFour from './components/Steps/stepFour'
 
 const steps = [
   { component: <StepOne /> },
@@ -20,13 +20,6 @@ const nextStyle = { background: '#33c3f0' }
 const App = () => (
   <div className='container'>
     <MultiStep activeStep={0} steps={steps} prevStyle={prevStyle} nextStyle={nextStyle} />
-    <div className='app-footer'>
-      <h6>Press 'Enter' or click on progress bar for next step.</h6>
-      Code is on{' '}
-      <a href='https://github.com/Srdjan/react-multistep' target='_blank' rel='noreferrer'>
-        github
-      </a>
-    </div>
   </div>
 )
 
